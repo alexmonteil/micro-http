@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>MicroHTTP Example</title>
+</head>
+
+<body>
+  <h1>MicroHTTP Example</h1>
+  <div class="container m3rem">
+    <h4>Instantiate the MicroHTTP Class</h4>
+    <!-- Code Block for MicroHTTP instantiation example -->
+    <div class="code">
+      <code>const http = new MicroHTTP;</code>
+    </div>
+  </div>
+  <div class="container m3rem">
+    <h4>GET request example</h4>
+    <!-- Code Block for GET request example -->
+    <div class="code">
+      <code>http.get('https://jsonplaceholder.typicode.com/users')</code><br>
+      <code>&nbsp;.then(data => console.log(data))</code><br>
+      <code>&nbsp;.catch(err => console.log(err));</code>
+    </div>
+  </div>
+  <div class="container m3rem">
+    <h4>POST request example</h4>
+    <!-- Code Block for POST request example -->
+    <div class="code">
+      <code>const data = {</code><br>
+      <code>&nbsp;name: 'John Doe',</code><br>
+      <code>&nbsp;username: 'johndoe',</code><br>
+      <code>&nbsp;email: 'jdoe@gmail.com'</code><br>
+      <code>};</code>
+    </div>
+    <div class="code">
+      <code>http.post('https://jsonplaceholder.typicode.com/users', data)</code><br>
+      <code>&nbsp;.then(data => console.log(data))</code><br>
+      <code>&nbsp;.catch(err => console.log(err));</code>
+    </div>
+  </div>
+  <div class="container m3rem">
+    <h4>PUT request example</h4>
+    <!-- Code Block for PUT request example -->
+    <div class="code">
+      <code>const data = {</code><br>
+      <code>&nbsp;name: 'John Doe',</code><br>
+      <code>&nbsp;username: 'johndoe',</code><br>
+      <code>&nbsp;email: 'jdoe@gmail.com'</code><br>
+      <code>};</code>
+    </div>
+    <div class="code">
+      <code>http.put('https://jsonplaceholder.typicode.com/users/2', data)</code><br>
+      <code>&nbsp;.then(data => console.log(data))</code><br>
+      <code>&nbsp;.catch(err => console.log(err));</code>
+    </div>
+  </div>
+  <div class="container m3rem">
+    <h4>DELETE request example</h4>
+    <!-- Code Block for DELETE request example -->
+    <div class="code">
+      <code>http.delete('https://jsonplaceholder.typicode.com/users/2')</code><br>
+      <code>&nbsp;.then(data => console.log(data))</code><br>
+      <code>&nbsp;.catch(err => console.log(err));</code>
+    </div>
+  </div>
+
+  <script src="microhttp.js"></script>
+  <!-- <script src="app.js"></script> -->
+</body>
+
+</html>
